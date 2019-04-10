@@ -1,0 +1,20 @@
+2019-04-10T06:39:34+00:00 CRITICAL Uncaught Error: Call to undefined function curl_init() in /var/www/html/wordpresss/wp-content/plugins/cmsmasters-content-composer/inc/twitter/twitteroauth.php:205
+Stack trace:
+#0 /var/www/html/wordpresss/wp-content/plugins/cmsmasters-content-composer/inc/twitter/twitteroauth.php(188): TwitterOAuth->http('https://api.twi...', 'GET')
+#1 /var/www/html/wordpresss/wp-content/plugins/cmsmasters-content-composer/inc/twitter/twitteroauth.php(148): TwitterOAuth->oAuthRequest('https://api.twi...', 'GET', Array)
+#2 /var/www/html/wordpresss/wp-content/themes/good-food/framework/function/general-functions.php(1273): TwitterOAuth->get('https://api.twi...', Array)
+#3 /var/www/html/wordpresss/wp-content/plugins/cmsmasters-content-composer/inc/shortcodes.php(6259): cmsmasters_get_tweets('cmsmasters', '5')
+#4 /var/www/html/wordpresss/wp-includes/shortcodes.php(325): Cmsmasters_Shortcodes->cmsmasters_twitter(Array, '', 'cmsmasters_twit...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 /var/www/html/wordpresss/wp-includes/ in /var/www/html/wordpresss/wp-content/plugins/cmsmasters-content-composer/inc/twitter/twitteroauth.php on line 205
+
+2019-04-10T09:39:07+00:00 CRITICAL Uncaught Exception: SQLSTATE[40001]: Serialization failure: 1213 Deadlock found when trying to get lock; try restarting transaction in /var/www/html/wordpresss/wp-content/plugins/mailpoet/lib/Models/Model.php:345
+Stack trace:
+#0 /var/www/html/wordpresss/wp-content/plugins/mailpoet/lib/Segments/WP.php(146): MailPoet\Models\Model::__callStatic('rawExecute', Array)
+#1 /var/www/html/wordpresss/wp-content/plugins/mailpoet/lib/Segments/WP.php(86): MailPoet\Segments\WP::insertSubscribers()
+#2 /var/www/html/wordpresss/wp-content/plugins/mailpoet/lib/Config/Populator.php(273): MailPoet\Segments\WP::synchronizeUsers()
+#3 /var/www/html/wordpresss/wp-content/plugins/mailpoet/lib/Config/Populator.php(126): MailPoet\Config\Populator->createDefaultSegments()
+#4 /var/www/html/wordpresss/wp-content/plugins/mailpoet/lib/Config/Activator.php(23): MailPoet\Config\Populator->up()
+#5 /var/www/html/wordpresss/wp-content/plugins/mailpoet/lib/Config/Initializer.php(149): MailPoet\Config\Activator->activate()
+#6 /var/www/html/wordpres in /var/www/html/wordpresss/wp-content/plugins/mailpoet/lib/Models/Model.php on line 345
+
